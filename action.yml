@@ -24,7 +24,7 @@ jobs:
 
         with:
 
-          token: ***
+          token: ${{ secrets.GITHUB.TOKEN }}
 
           title: Activity discussion
 

@@ -1,6 +1,9 @@
 
 name: Discuss new activities
-
+description: Help your community decide whether an activity should be undid or not.
+branding:
+  icon: 'alert-circle'
+  color: 'red'
 on:
   [push, gollum, pull_request]
   

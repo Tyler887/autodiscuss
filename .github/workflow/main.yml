@@ -1,0 +1,21 @@
+
+name: Discuss new activities
+
+on:
+  [push, gollum, pull_request]
+  
+
+jobs:
+  discuss:
+
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      
+
+    steps:
+      - name: Generate issue
+        run: gh issue create --body "To keep others safe, this has been auto-generated as a discussion issue. Heads up, tell the maintainers if this is a safe action. It is reccommended to see the [Code of Conduct](./CODE_OF_CONDUCT.md)."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
